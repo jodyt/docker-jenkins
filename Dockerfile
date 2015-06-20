@@ -8,4 +8,4 @@ RUN wget -q -O - http://pkg.jenkins-ci.org/debian-stable/jenkins-ci.org.key | su
 RUN echo "deb http://pkg.jenkins-ci.org/debian-stable binary/" >> /etc/apt/sources.list
 
 RUN apt-get update
-RUN apt-get install -y jenkins
+RUN apt-get install -y jenkins && apt-get clean
